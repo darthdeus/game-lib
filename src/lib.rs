@@ -14,7 +14,7 @@ pub use serde;
 pub use macroquad;
 pub use anyhow::Result;
 
-pub use macroquad_particles::{BlendMode, Curve, Emitter, EmitterConfig};
+pub use macroquad_particles::{BlendMode, ColorCurve, Curve, Emitter, EmitterConfig};
 
 pub fn load_json_from_file_or_default<T: for<'a> Deserialize<'a> + Default>(
     path: &str,
