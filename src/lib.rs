@@ -1,4 +1,5 @@
 pub use itertools::Itertools;
+pub use macroquad::rand::gen_range;
 // pub use nanoserde::{SerJson, DeJson};
 pub use serde::{Deserialize, Serialize};
 
@@ -41,3 +42,15 @@ pub fn save_json_to_file<T: Serialize>(path: &str, val: &T) {
         error!("Error: {}", err);
     });
 }
+
+pub fn toss_coin(p: f32) -> bool {
+    gen_range(0.0, 1.0) < p
+}
+
+pub fn random_around(position: Vec2, min: f32, max: f32) -> Vec2 {
+    let r = gen_range(min, max);
+    let angle = gen_range(0.0, std::f32::consts::PI * 2.0);
+
+    position + Vec2::new(angle.cos() * r, angle.sin() * r)
+}
+
