@@ -18,6 +18,8 @@ pub use std::collections::hash_map::Entry;
 pub use std::sync::Arc;
 pub use std::{cell::RefCell, rc::Rc};
 
+pub use hecs::World;
+
 pub use anyhow::Result;
 pub use egui;
 pub use egui_macroquad;
