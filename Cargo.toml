@@ -14,9 +14,11 @@ hecs = "0.9.1"
 itertools = "0.10.5"
 macroquad = "0.3.25"
 macroquad-particles = "0.1.1"
+nalgebra = { version = "0.31.4", features = ["convert-glam021", "glam021"] }
 parking_lot = "0.12.1"
+parry2d = "0.11.0"
 pollster = "0.2.5"
+rapier2d = "0.16.1"
 # nanoserde = "0.1.32"
 serde = { version = "1.0.151", features = ["derive"] }
 serde_json = "1.0.91"
-

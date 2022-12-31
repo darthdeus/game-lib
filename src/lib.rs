@@ -7,6 +7,12 @@ pub use pollster::FutureExt;
 // pub use nanoserde::{SerJson, DeJson};
 pub use serde::{Deserialize, Serialize};
 
+pub use rapier2d::prelude::*;
+
+pub use rapier2d;
+pub use nalgebra;
+pub use parry2d;
+
 pub use macroquad::prelude::*;
 
 pub use std::collections::HashMap;
