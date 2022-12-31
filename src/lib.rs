@@ -18,7 +18,7 @@ pub use std::collections::hash_map::Entry;
 pub use std::sync::Arc;
 pub use std::{cell::RefCell, rc::Rc};
 
-pub use hecs::World;
+pub use hecs::{CommandBuffer, World};
 
 pub use anyhow::Result;
 pub use egui;
@@ -27,9 +27,13 @@ pub use macroquad;
 pub use serde;
 pub use serde_json;
 
-pub use macroquad_particles::{BlendMode, ColorCurve, Curve, Emitter, EmitterConfig};
+pub use macroquad_particles::{
+    BlendMode, ColorCurve, Curve, Emitter, EmitterConfig,
+};
 
-pub fn load_json_from_file_or_default<T: for<'a> Deserialize<'a> + Default>(path: &str) -> T {
+pub fn load_json_from_file_or_default<T: for<'a> Deserialize<'a> + Default>(
+    path: &str,
+) -> T {
     let doit = || -> Result<T> {
         let data = std::fs::read_to_string(path)?;
         Ok(serde_json::from_str::<T>(&data)?)
