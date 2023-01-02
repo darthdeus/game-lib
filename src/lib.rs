@@ -9,9 +9,9 @@ pub use serde::{Deserialize, Serialize};
 
 pub use rapier2d::prelude::*;
 
-pub use rapier2d;
 pub use nalgebra;
 pub use parry2d;
+pub use rapier2d;
 
 pub use macroquad::prelude::*;
 pub use macroquad::rand::{rand, srand};
@@ -28,11 +28,20 @@ pub use std::{cell::RefCell, rc::Rc};
 pub use hecs::{CommandBuffer, World};
 
 pub use anyhow::Result;
+pub use anymap::AnyMap;
 pub use egui;
 pub use egui_macroquad;
+pub use git_version;
+pub use lazy_static::lazy_static;
 pub use macroquad;
+pub use once_cell;
 pub use serde;
 pub use serde_json;
+pub use notify;
+
+pub use rapier2d::geometry::Aabb;
+
+pub use std::fmt;
 
 pub fn random() -> f32 {
     gen_range(0.0, 1.0)
