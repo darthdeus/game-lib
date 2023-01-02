@@ -14,6 +14,7 @@ pub use nalgebra;
 pub use parry2d;
 
 pub use macroquad::prelude::*;
+pub use macroquad::rand::{rand, srand};
 
 pub use std::collections::HashMap;
 
@@ -32,6 +33,10 @@ pub use egui_macroquad;
 pub use macroquad;
 pub use serde;
 pub use serde_json;
+
+pub fn random() -> f32 {
+    gen_range(0.0, 1.0)
+}
 
 pub use macroquad_particles::{
     BlendMode, ColorCurve, Curve, Emitter, EmitterConfig,
