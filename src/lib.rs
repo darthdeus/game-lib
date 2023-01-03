@@ -29,15 +29,16 @@ pub use hecs::{CommandBuffer, World};
 
 pub use anyhow::Result;
 pub use anymap::AnyMap;
+pub use crossbeam;
 pub use egui;
 pub use egui_macroquad;
 pub use git_version;
 pub use lazy_static::lazy_static;
 pub use macroquad;
+pub use notify;
 pub use once_cell;
 pub use serde;
 pub use serde_json;
-pub use notify;
 
 pub use rapier2d::geometry::Aabb;
 
