@@ -79,6 +79,10 @@ pub fn save_json_to_file<T: Serialize>(path: &str, val: &T) {
     });
 }
 
+pub fn coin_toss(p: f32) -> bool {
+    toss_coin(p)
+}
+
 pub fn toss_coin(p: f32) -> bool {
     gen_range(0.0, 1.0) < p
 }
